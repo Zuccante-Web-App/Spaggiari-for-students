@@ -1,0 +1,1 @@
+Ogni widget prenderà il nome di NomeWidget.dart
