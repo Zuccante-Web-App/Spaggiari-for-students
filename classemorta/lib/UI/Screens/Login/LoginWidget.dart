@@ -8,13 +8,12 @@ class Login extends StatelessWidget {
     return MaterialApp(
       theme:ThemeData(
         brightness: Brightness.light,
-        primarySwatch: secondaryLightColor
+        primarySwatch: Colors.lightBlue
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         primarySwatch: secondaryDarkColor
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
