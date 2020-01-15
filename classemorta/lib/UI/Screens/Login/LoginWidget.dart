@@ -49,6 +49,7 @@ void LoginMethod() {
   NetworkRepo.logIn(usr, pass).then((Response<LoginResponse> response){
     if(response.esit){
       //tutto ok
+      print("[INFO] Login succeded!");
     } else {
       //richiesta fallita/credenziali sbagliate
     }
