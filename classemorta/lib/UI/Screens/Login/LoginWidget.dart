@@ -1,7 +1,10 @@
+import 'package:classemorta/Service/Network/Response.dart';
+import 'package:classemorta/Service/Network/Responses/LoginResponse.dart';
 import 'package:classemorta/UI/Screens/Login/ButtonWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:classemorta/UI/SimpleItems/ColorsTemplate.dart';
 import 'TextFieldWidget.dart';
+import 'package:classemorta/Service/Network/NetworkRepo.dart';
 
 class MyLoginPage extends StatefulWidget {
   MyLoginPage({Key key, this.title}) : super(key: key);
@@ -42,4 +45,12 @@ void LoginMethod() {
 
   String pass = pw.text;
   username.clear();
+
+  NetworkRepo.logIn(usr, pass).then((Response<LoginResponse> response){
+    if(response.esit){
+      //tutto ok
+    } else {
+      //richiesta fallita/credenziali sbagliate
+    }
+  });
 }
