@@ -1,47 +1,45 @@
+import 'package:classemorta/UI/Screens/Login/ButtonWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:classemorta/UI/SimpleItems/ColorsTemplate.dart';
 import 'TextFieldWidget.dart';
 
-class Login extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme:ThemeData(
-        brightness: Brightness.light,
-        primarySwatch: Colors.lightBlue
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: secondaryDarkColor
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class MyLoginPage extends StatefulWidget {
+  MyLoginPage({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyLoginPageState createState() => _MyLoginPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-
+class _MyLoginPageState extends State<MyLoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(height: 45.0),
+        child: Padding(
+          padding: const EdgeInsets.all(36.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: 45.0),
               UsernameField(),
-            SizedBox(height: 25.0),
+              SizedBox(height: 25.0),
               PwField(),
-          ],
+              SizedBox(height: 45.0),
+              ButtonLogin(),
+            ],
+          ),
         ),
       ),
     );
   }
+}
+
+//scrivere qui codice login, in seguito richiamarlo dall'onPressed di ButtonWidget (ti ho già importato il file dart)
+void LoginMethod() {
+  String usr = username.text;
+  username.clear();
+
+  String pass = pw.text;
+  username.clear();
 }

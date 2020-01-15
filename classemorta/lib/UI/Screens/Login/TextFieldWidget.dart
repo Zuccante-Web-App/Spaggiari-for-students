@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:classemorta/UI/SimpleItems/StyleTemplate.dart';
 
-TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 var padding = EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0);
 
 var border = OutlineInputBorder(borderRadius: BorderRadius.circular(32.0));
 
+TextEditingController username = new TextEditingController();
+
 class UsernameField extends StatelessWidget{
-
-  TextEditingController username = new TextEditingController();
- 
-
   Widget build(BuildContext buildContext){
     return TextField(
       style: style, 
@@ -22,9 +20,9 @@ class UsernameField extends StatelessWidget{
   }
 }
 
-class PwField extends StatelessWidget{
-   TextEditingController pw = new TextEditingController();
+TextEditingController pw = new TextEditingController();
 
+class PwField extends StatelessWidget{
    Widget build(BuildContext buildContext){
      return TextField(
         obscureText: true,

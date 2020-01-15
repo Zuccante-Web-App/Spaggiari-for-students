@@ -1,3 +1,4 @@
+import 'package:classemorta/UI/SimpleItems/ColorsTemplate.dart';
 import 'package:flutter/material.dart';
 import 'package:classemorta/UI/Screens/Login/LoginWidget.dart';
 
@@ -9,7 +10,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+           brightness: Brightness.light,
+        primaryColor: Colors.lightBlue
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.cyan
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -28,18 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Login(),
-          ],
-        ),
-      ),
-    );
+    return MyLoginPage();
   }
 }
