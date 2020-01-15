@@ -1,5 +1,5 @@
 # Spaggiari-for-students
 
-### __ Un' app da noi per voi __
+## _Da noi per voi_
 
 By: Thomas, Clarissa, Filippo & Mattia
