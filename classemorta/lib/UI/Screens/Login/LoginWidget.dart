@@ -1,6 +1,6 @@
 import 'package:classemorta/Service/Network/Response.dart';
 import 'package:classemorta/Service/Network/Responses/LoginResponse.dart';
-import 'package:classemorta/UI/Screens/Login/ButtonWidget.dart';
+import 'ButtonWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:classemorta/UI/SimpleItems/ColorsTemplate.dart';
 import 'TextFieldWidget.dart';
@@ -39,7 +39,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
 }
 
 //scrivere qui codice login, in seguito richiamarlo dall'onPressed di ButtonWidget (ti ho già importato il file dart)
-void LoginMethod() {
+void loginMethod() {
   String usr = username.text;
   username.clear();
 

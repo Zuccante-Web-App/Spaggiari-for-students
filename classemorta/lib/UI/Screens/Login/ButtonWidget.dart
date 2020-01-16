@@ -8,10 +8,10 @@ class ButtonLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       padding: EdgeInsets.fromLTRB(45.0, 15.0, 45.0, 15.0),
-      onPressed: LoginMethod,
+      onPressed: loginMethod,
       color: Colors.lightBlue,
       shape: RoundedRectangleBorder(
-        borderRadius: new BorderRadius.circular(18.0)
+        borderRadius: new BorderRadius.circular(20.0)
       ),
       child: Text("Login",
           textAlign: TextAlign.center,
