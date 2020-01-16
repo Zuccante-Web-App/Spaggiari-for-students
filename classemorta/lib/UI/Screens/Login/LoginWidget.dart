@@ -1,3 +1,4 @@
+import 'package:classemorta/Service/DataSaving/SharedPrefManager.dart';
 import 'package:classemorta/Service/Network/Response.dart';
 import 'package:classemorta/Service/Network/Responses/LoginResponse.dart';
 import 'ButtonWidget.dart';
@@ -50,6 +51,8 @@ void loginMethod() {
     if(response.esit){
       //tutto ok
       print("[INFO] Login succeded!");
+      SharedPrefManager.addPref(SharedPrefManager.USERNAME_PREF, usr);
+      SharedPrefManager.addPref(SharedPrefManager.PASSWORD_PREF, pass);
     } else {
       //richiesta fallita/credenziali sbagliate
     }
