@@ -25,6 +25,13 @@ class _MyLoginPageState extends State<MyLoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                      height: 155.0,
+                      child: Image.asset(
+                        "assets/logo.png",
+                        fit: BoxFit.contain,
+                      ),
+                    ),
               SizedBox(height: 45.0),
               UsernameField(),
               SizedBox(height: 25.0),
