@@ -31,7 +31,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         "assets/logo.png",
                         fit: BoxFit.contain,
                       ),
-                    ),
+                    ),  
               SizedBox(height: 45.0),
               UsernameField(),
               SizedBox(height: 25.0),

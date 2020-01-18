@@ -1,3 +1,4 @@
+import 'package:classemorta/UI/Screens/Home/HomePageWidget.dart';
 import 'package:classemorta/UI/SimpleItems/ColorsTemplate.dart';
 import 'package:flutter/material.dart';
 import 'package:classemorta/UI/Screens/Login/LoginWidget.dart';
@@ -11,11 +12,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
            brightness: Brightness.light,
-        primaryColor: Colors.lightBlue
+        primaryColor: secondaryLightColor
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        primaryColor: Colors.cyan
+        primaryColor: secondaryDarkColor
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -34,6 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return MyLoginPage();
+    return MyHomePage();
   }
 }
