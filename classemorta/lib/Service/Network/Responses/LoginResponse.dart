@@ -8,6 +8,8 @@ class LoginResponse {
 
     String get firstName => _firstName;
     String get lastName => _lastName;
+    String get studentId => _ident;
+    String get token => _token;
   
     LoginResponse.fromJson(Map<String, dynamic> json):
       _ident = json["ident"], 

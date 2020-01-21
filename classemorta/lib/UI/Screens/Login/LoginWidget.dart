@@ -25,14 +25,14 @@ class _MyLoginPageState extends State<MyLoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
+             /* SizedBox(
                       height: 155.0,
                       child: Image.asset(
                         "assets/logo.png",
                         fit: BoxFit.contain,
                       ),
                     ),
-              SizedBox(height: 45.0),
+              SizedBox(height: 45.0),*/
               UsernameField(),
               SizedBox(height: 25.0),
               PwField(),
@@ -53,6 +53,7 @@ void loginMethod() {
 
   String pass = pw.text;
   username.clear();
+  print("username: $usr");
 
   NetworkRepo.logIn(usr, pass).then((Response<LoginResponse> response){
     if(response.esit){
@@ -62,6 +63,8 @@ void loginMethod() {
       SharedPrefManager.addPref(SharedPrefManager.PASSWORD_PREF, pass);
       SharedPrefManager.addPref(SharedPrefManager.FIRSTNAME_PREF, response.data.firstName);
       SharedPrefManager.addPref(SharedPrefManager.LASTNAME_PREF, response.data.lastName);
+      SharedPrefManager.addPref(SharedPrefManager.STUDENT_ID_PREF, response.data.studentId);
+      NetworkRepo.getNoticeBoard(response.data.studentId, response.data.token);
     } else {
       //richiesta fallita/credenziali sbagliate
     }
