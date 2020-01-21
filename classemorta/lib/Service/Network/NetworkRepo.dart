@@ -24,7 +24,6 @@ class NetworkRepo {
   // Data required:  {"ident":null","pass":"user_pass","uid":"user_id"}
   static Future<Response<LoginResponse>> logIn(String username, String password) async {
       Map<String, String> body = {'ident' : 'null', "pass" : password, "uid" : username };
-      JsonEncoder je = JsonEncoder();
       String url = _MAIN_URL + _LOGIN_URL;
       http.Response res = await http.post(url, headers: _headers, body: je.convert(body));
       print("[INFO] Response from $url : ${res.statusCode}");
@@ -32,7 +31,7 @@ class NetworkRepo {
       if (res.statusCode < 200 || res.statusCode >= 400) {
           return Response<LoginResponse>(false, null);
       } else {
-          return Response<LoginResponse>(true, null /*TODO*/);
+          return Response<LoginResponse>(true, LoginResponse().fromJson(jsonEncode(res.body)));
       } 
   }
   
