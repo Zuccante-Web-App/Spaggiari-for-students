@@ -1,4 +1,4 @@
-import 'package:classemorta/UI/Screens/Home/HomePageWidget.dart';
+import 'package:classemorta/UI/Screens/NoticeBoard/NoticeBoardWidget.dart';
 import 'package:classemorta/UI/SimpleItems/ColorsTemplate.dart';
 import 'package:flutter/material.dart';
 import 'package:classemorta/UI/Screens/Login/LoginWidget.dart';
@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-           brightness: Brightness.light,
-        primaryColor: secondaryLightColor
-      ),
+         // appBarTheme: AppBarTheme(color: secondaryLightColor),
+          brightness: Brightness.light,
+          primaryColor: secondaryLightColor),
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: secondaryDarkColor
-      ),
+        //  appBarTheme: AppBarTheme(color: secondaryDarkColor),
+          brightness: Brightness.dark,
+          primaryColor: secondaryDarkColor),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -32,9 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-    return MyHomePage();
+    return MyNoticeBoard();
   }
 }
