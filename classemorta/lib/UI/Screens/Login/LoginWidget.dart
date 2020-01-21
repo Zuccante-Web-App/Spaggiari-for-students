@@ -60,6 +60,8 @@ void loginMethod() {
       print("[INFO] Login succeded!");
       SharedPrefManager.addPref(SharedPrefManager.USERNAME_PREF, usr);
       SharedPrefManager.addPref(SharedPrefManager.PASSWORD_PREF, pass);
+      SharedPrefManager.addPref(SharedPrefManager.FIRSTNAME_PREF, response.data.firstName);
+      SharedPrefManager.addPref(SharedPrefManager.LASTNAME_PREF, response.data.lastName);
     } else {
       //richiesta fallita/credenziali sbagliate
     }

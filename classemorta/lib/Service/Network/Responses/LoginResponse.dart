@@ -5,6 +5,9 @@ class LoginResponse {
     String _token;
     String _relase;
     String _expire;
+
+    String get firstName => _firstName;
+    String get lastName => _lastName;
   
     LoginResponse.fromJson(Map<String, dynamic> json):
       _ident = json["ident"], 
@@ -16,7 +19,6 @@ class LoginResponse {
       
   Map<String, dynamic> toJson() =>
     {
-      
       'ident': _ident,
       'firstName': _firstName,
       'lastName': _lastName,

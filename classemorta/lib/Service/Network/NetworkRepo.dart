@@ -31,7 +31,7 @@ class NetworkRepo {
       if (res.statusCode < 200 || res.statusCode >= 400) {
           return Response<LoginResponse>(false, null);
       } else {
-          return Response<LoginResponse>(true, LoginResponse().fromJson(jsonEncode(res.body)));
+          return Response<LoginResponse>(true, LoginResponse.fromJson(jsonDecode(res.body)));
       } 
   }
   

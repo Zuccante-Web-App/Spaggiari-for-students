@@ -4,6 +4,8 @@ class SharedPrefManager {
 
   static const String USERNAME_PREF = "username-pref";
   static const String PASSWORD_PREF = "password-pref";
+  static const String FIRSTNAME_PREF = "firstname-pref";
+  static const String LASTNAME_PREF = "lastname-pref"; 
 
    static Future<String> getStringPref(String name) async {
        final SharedPreferences pref = await SharedPreferences.getInstance();
